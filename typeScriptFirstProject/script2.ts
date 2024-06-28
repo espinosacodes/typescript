@@ -1,3 +1,3 @@
-console.log('yo soy programador ts')
 
-//19:26
+console.log('la verdad que aprendi mucho es estra seccion')
+

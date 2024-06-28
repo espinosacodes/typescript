@@ -1,2 +1,2 @@
 "use strict";
-console.log('yo soy programador ts');
+console.log('la verdad que aprendi mucho es estra seccion');
