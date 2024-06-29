@@ -1,26 +1,18 @@
-"use strict";
-let programmer = {
-    name: 'John Doe',
-    age: 30,
-    skills: ['HTML', 'CSS', 'JS'],
-    address: {
-        city: 'New York',
-        country: 'USA'
-    },
-    drink: false
-};
-let programmer2 = {
-    name: 'Jane Doe',
-    age: 25,
-    skills: ['HTML', 'CSS', 'JS', 'React'],
-    address: {
-        city: 'San Francisco',
-        country: 'USA'
-    },
-    drink: null
-};
-function sendCv(programmer) {
-    console.log(`Sending CV to ${programmer.name}`);
-}
-sendCv(programmer2);
-//1:16:30
+var Sorteo = /** @class */ (function () {
+    function Sorteo(name) {
+        this.name = name;
+    }
+    Sorteo.prototype.setTicket = function (ticket) {
+        this.ticket = ticket;
+    };
+    Sorteo.prototype.getTicket = function () {
+        return this.ticket;
+    };
+    Sorteo.prototype.sort = function () {
+        return "for ".concat(this.name, " the ticket is ").concat(this.ticket);
+    };
+    return Sorteo;
+}());
+var sorteo = new Sorteo('santiago');
+sorteo.setTicket(7);
+console.log(sorteo.sort());

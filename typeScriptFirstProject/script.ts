@@ -1,43 +1,30 @@
-interface Programmer {
-    name: string,
-    age: number,
-    skills: string[],
-    address: {
-        city: string,
-        country: string
-    },
-    drink: boolean | null
+class Sorteo<T>{
+    private ticket?: T;
+
+
+    constructor(
+        private name :string
+    ){ }
+
+    setTicket(ticket: T): void {
+        this.ticket = ticket;
+    
+    }
+
+    getTicket(){
+        return this.ticket;
+    }
+
+    public sort(): string {
+        return `for ${this.name} the ticket is ${this.ticket}`;
+    }
 
 }
 
+let sorteo =  new Sorteo<number>('santiago')
+sorteo.setTicket(7)
+
+console.log(sorteo.sort())
 
 
-let programmer: Programmer = {
-    name: 'John Doe',
-    age: 30,
-    skills: ['HTML', 'CSS', 'JS'],
-    address: {
-        city: 'New York',
-        country: 'USA'
-    },
-    drink: false
-}
 
-let programmer2: Programmer = {
-    name: 'Jane Doe',
-    age: 25,
-    skills: ['HTML', 'CSS', 'JS', 'React'],
-    address: {
-        city: 'San Francisco',
-        country: 'USA'
-    },
-    drink: null
-}
-
-function sendCv(programmer: Programmer){
-    console.log(`Sending CV to ${programmer.name}`)
-}
-
-sendCv(programmer2)
-
-//1:16:30
