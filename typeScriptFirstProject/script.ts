@@ -27,4 +27,4 @@ sorteo.setTicket(7)
 console.log(sorteo.sort())
 
 
-
+//1:30:05

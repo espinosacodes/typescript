@@ -16,3 +16,4 @@ var Sorteo = /** @class */ (function () {
 var sorteo = new Sorteo('santiago');
 sorteo.setTicket(7);
 console.log(sorteo.sort());
+//1:30:05
